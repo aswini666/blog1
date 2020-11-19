@@ -1,3 +1,9 @@
-<p>
-  <%= comment.content %>
-</p>
+<div class="row clearfix">
+    <div class="index_row">
+      <%= comment.content %>
+      <button><%= link_to "Delete", post_comment_path(comment), method: :delete, data: {confirm: "Are you sure"}  %></button>
+    </div>
+</div>
+
+
+ 

@@ -1,11 +1,11 @@
-<p>
-  <%= link_to "New Post", new_post_path %>
-</p>
-<h1>All Posts </h1>
-<p>
   <% @posts.each do |post| %>
-    <%= link_to post.title, post_path(post) %> |
-    <%= link_to "Edit", edit_post_path(post) %>|
-    <%= link_to "Delete", post, method: :delete, data: {confirm: "Are You Sure"} %><br/> 
+	  <div class="index_row clearfix">
+	     <div class="post_title"><%= link_to post.title, post_path(post) %> </div>
+	 </div>
   <% end %>
-</p>
+  
+
+<div class="links">
+	<%= link_to "New Post", new_post_path %>
+</div>
+

@@ -1,15 +1,15 @@
 <%= form_with(model: @post) do |f| %>
-  <p>
+  <div class="field">
     <%= f.label :Title %>
      <%= f.text_field :title %>
-   </p>
+   </div>
    
-   <p>
+   <div class="field">
     <%= f.label :Description %>
      <%= f.text_area :description %>
-   </p>
+   </div>
 
-   <p>
+   <div class="field">
     <%= f.submit "Submit" %>
-   </p>
+   </div>
 <% end %>

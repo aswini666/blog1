@@ -1,17 +1,25 @@
-<h2>
+<h2 class="post_title">
   <%= @post.title %>
 </h2>
-<p>
-  Posted <%= time_ago_in_words(@post.created_at) %> ago
-</p>
-<p>
-  <%= @post.description %>
-</p>
-<br/>
 
-<p>
-  <h3>Add a Comment </h3>
-  <%= render @post.comments %>
+<div class="sub_title">
+  Posted <%= time_ago_in_words(@post.created_at) %> ago  
+</div>
+
+<div class="index_row">
+  <%= @post.description %>
+</div>
+
+
+ <h3 class="post_title">Add a Comment </h3>
+ <div class="comments_wrapper">
+ 	<%= render @post.comments %>
+ <div class="form">
+  
   <%= render 'comments/form' %>
-</p>
-<%= link_to "Back", root_path %>
+</div>
+</div>
+
+<div class="links">
+  <%= link_to "Back", root_path %>
+</div>
