@@ -1,11 +1,11 @@
-  <% @posts.each do |post| %>
-	  <div class="index_row clearfix">
-	     <div class="post_title"><%= link_to post.title, post_path(post) %> </div>
-	 </div>
-  <% end %>
+<% @posts.each do |post| %>
+  <div class="index_row clearfix">
+     <div class="post_title"><%= link_to post.title, post_path(post) %> </div>
+ </div>
+<% end %>
   
 
 <div class="links">
-	<%= link_to "New Post", new_post_path %>
+  <%= link_to "New Post", new_post_path %>
 </div>
 

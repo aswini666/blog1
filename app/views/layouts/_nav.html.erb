@@ -1,0 +1,13 @@
+<% if user_signed_in? %>
+<div class="topnav" id="myTopnav">
+  <a href="#home" class="active"></a>
+  <a href="/posts">Home</a>
+  <a href="#contact"></a>
+  <a href="/users/edit">Account Settings</a>
+  <a href="#contact"></a>
+  <a href="#contact"></a>
+  <a href="#contact"></a>
+  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+  
+</div>
+<% end %>

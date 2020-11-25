@@ -8,12 +8,14 @@
 
 <div class="index_row">
   <%= @post.description %>
+  
 </div>
 
 
  <h3 class="post_title">Add a Comment </h3>
  <div class="comments_wrapper">
  	<%= render @post.comments %>
+
  <div class="form">
   
   <%= render 'comments/form' %>

@@ -1,6 +1,9 @@
 <div class="row clearfix">
     <div class="index_row">
       <%= comment.content %>
+      <div class="sub_title">
+ 		Commented by <%= comment.user.email %>
+ 	</div>
       <button><%= link_to "Delete", post_comment_path(comment), method: :delete, data: {confirm: "Are you sure"}  %></button>
     </div>
 </div>
