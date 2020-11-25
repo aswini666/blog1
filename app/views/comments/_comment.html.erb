@@ -1,11 +1,16 @@
 <div class="row clearfix">
     <div class="index_row">
+    
       <%= comment.content %>
       <div class="sub_title">
+      	<% if comment.user.present? %>
  		Commented by <%= comment.user.email %>
+ 		<% end %>
  	</div>
+ 	<% if comment.user_id == current_user.id %>
       <button><%= link_to "Delete", post_comment_path(comment), method: :delete, data: {confirm: "Are you sure"}  %></button>
     </div>
+    <% end %>
 </div>
 
 
